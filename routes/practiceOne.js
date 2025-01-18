@@ -56,9 +56,9 @@ router.get('/', (_req, res) => {
         members: ['山下達郎'],
       },
       {
-        name: 'SMAP',
-        representativeSong: 'ありがとう',
-        members: ['木村拓哉', '中居正広', '稲垣吾郎', '草彅剛', '香取慎吾'],
+        name: 'UVERworld',
+        representativeSong: 'CHANCE!',
+        members: ['TAKUYA∞', '克哉', '信人', '誠果', '彰', '真太郎'],
       },
     ],
   });

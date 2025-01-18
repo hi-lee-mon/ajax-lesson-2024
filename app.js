@@ -13,14 +13,14 @@ const practiceOne = require('./routes/practiceOne');
  * ルーティング
  */
 router.get('/', (req, res) => {
-  res.render('home');
+  res.render('home', {title:'ホーム'});
 });
 
 router.use('/practiceOne', practiceOne);
 
 // 404
-app.all('*',(_req,res)=>{
-  res.status("404").send("ページが見つかりません")
+router.all('*',(_req,res)=>{
+  res.status(404).render('404',{title:'404'});
 })
 
 module.exports = router;

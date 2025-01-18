@@ -4,6 +4,7 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
+const ejsMate = require('ejs-mate');
 
 /**
  * ルーティングの読み込み
@@ -29,6 +30,11 @@ app
  */
 app.set("views", path.join(__dirname, "views"));
 app.set('view engine','ejs');
+
+/**
+ * 共通レイアウト作成のためにejsMateンを使用
+ */
+app.engine('ejs', ejsMate)
 
 /**
  * 静的ファイルディレクトをpublicに設定

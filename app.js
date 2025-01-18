@@ -18,4 +18,9 @@ router.get('/', (req, res) => {
 
 router.use('/practiceOne', practiceOne);
 
+// 404
+app.all('*',(_req,res)=>{
+  res.status("404").send("ページが見つかりません")
+})
+
 module.exports = router;

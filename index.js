@@ -30,6 +30,11 @@ app
 app.set("views", path.join(__dirname, "views"));
 app.set('view engine','ejs');
 
+/**
+ * 静的ファイルディレクトをpublicに設定
+ */
+app.use(express.static(path.join(__dirname, "public")));
+
   /**
  * CORSの設定
  * 全て許可する
@@ -40,8 +45,3 @@ app.use(cors());
  * ルーティング
  */
 app.use('/', appRouter);
-
-
-app.all('*',(_req,res)=>{
-  res.status("404").send("ページが見つかりません")
-})

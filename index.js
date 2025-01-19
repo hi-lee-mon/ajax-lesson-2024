@@ -1,4 +1,9 @@
 /**
+ * index.jsでは、Expressサーバーの起動と各種設定を責務とする
+ * ルーティングはapp.jsで行う
+ */
+
+/**
  * ライブラリの読み込み
  */
 const express = require('express');
@@ -26,13 +31,13 @@ app
   });
 
 /**
- * テンプレートエンジンの読み込み
+ * テンプレートエンジンの読み込みとフォルダの設定
  */
 app.set("views", path.join(__dirname, "views"));
 app.set('view engine','ejs');
 
 /**
- * 共通レイアウト作成のためにejsMateンを使用
+ * 共通レイアウト作成のためにejsMateを使用
  */
 app.engine('ejs', ejsMate)
 

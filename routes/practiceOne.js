@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (_req, res) => {
+  // キャッシュの有効期間を10時間に設定
   res.set('Cache-Control', 'public, max-age=36000');
   res.status(200).json({
     musicians: [

@@ -15,6 +15,7 @@ const lessonOne = require('./routes/2023/lessonOne');
 const lessonTwo = require('./routes/2023/lessonTwo');
 const lessonThree = require('./routes/2023/lessonThree');
 const nonAjaxMap = require('./routes/nonAjaxMap');
+const notfound = require('./routes/notFound');
 
 /**
  * ルーティング
@@ -27,9 +28,6 @@ router.use('/lessonOne', lessonOne);
 router.use('/lessonTwo', lessonTwo);
 router.use('/lessonThree', lessonThree);
 router.use('/nonAjaxMap', nonAjaxMap);
-
-router.all('*',(_req,res)=>{
-  res.status(404).render('404',{title:'404'});
-})
+router.use('*', notfound);
 
 module.exports = router;

@@ -12,7 +12,7 @@ router.get('/', (request, response) => {
       results: [
         {
           name: '山田太郎',
-          employeeNumber: '003',
+          employeeNumber: '001',
           birthMonth: '3',
           skills: ['javaScript', 'java'],
         },

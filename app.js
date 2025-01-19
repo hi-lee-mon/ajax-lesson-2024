@@ -7,6 +7,7 @@ const router = express.Router();
 /**
  * ルーティングの読み込み
  */
+const home = require('./routes/home');
 const practiceOne = require('./routes/practiceOne');
 const practiceTwo = require('./routes/practiceTwo');
 const practiceTwoPlus = require('./routes/practiceTwoPlus');
@@ -18,9 +19,7 @@ const nonAjaxMap = require('./routes/nonAjaxMap');
 /**
  * ルーティング
  */
-router.get('/', (req, res) => {
-  res.render('home', {title:'ホーム'});
-});
+router.use('/', home);
 router.use('/practiceOne', practiceOne);
 router.use('/practiceTwo', practiceTwo);
 router.use("/practiceTwoPlus", practiceTwoPlus);

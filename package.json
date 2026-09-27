@@ -8,12 +8,13 @@
   "author": "Shunsuke Kameda",
   "license": "ISC",
   "description": "2024JavaScript研修API",
+  "packageManager": "npm@12.1.0",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dayjs": "^1.11.13",
-    "ejs": "^3.1.10",
-    "ejs-mate": "^4.0.0",
-    "express": "^4.21.2",
-    "nodemon": "^3.1.9"
+    "cors": "2.8.6",
+    "dayjs": "1.11.23",
+    "ejs": "3.1.10",
+    "ejs-mate": "4.0.0",
+    "express": "4.22.3",
+    "nodemon": "3.1.14"
   }
 }
